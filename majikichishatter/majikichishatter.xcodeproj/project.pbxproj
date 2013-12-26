@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4C93FE1186BE45100669027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE0186BE45100669027 /* Foundation.framework */; };
+		D4C93FE3186BE45100669027 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE2186BE45100669027 /* CoreGraphics.framework */; };
+		D4C93FE5186BE45200669027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE4186BE45200669027 /* UIKit.framework */; };
+		D4C93FEB186BE45200669027 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4C93FE9186BE45200669027 /* InfoPlist.strings */; };
+		D4C93FED186BE45200669027 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C93FEC186BE45200669027 /* main.m */; };
+		D4C93FF1186BE45200669027 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C93FF0186BE45200669027 /* AppDelegate.m */; };
+		D4C93FF3186BE45200669027 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C93FF2186BE45200669027 /* Images.xcassets */; };
+		D4C93FFA186BE45200669027 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FF9186BE45200669027 /* XCTest.framework */; };
+		D4C93FFB186BE45200669027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE0186BE45100669027 /* Foundation.framework */; };
+		D4C93FFC186BE45200669027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE4186BE45200669027 /* UIKit.framework */; };
+		D4C94004186BE45200669027 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4C94002186BE45200669027 /* InfoPlist.strings */; };
+		D4C94006186BE45200669027 /* majikichishatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C94005186BE45200669027 /* majikichishatterTests.m */; };
+		D4C94011186BE4EB00669027 /* FaceDetection.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4C94010186BE4EB00669027 /* FaceDetection.mm */; };
+		D4C94013186BE67C00669027 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C94012186BE67C00669027 /* opencv2.framework */; };
+		F3E03847D6B9498695562C90 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C80328A125B4CEAA9D801FD /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4C93FFD186BE45200669027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4C93FD5186BE45100669027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4C93FDC186BE45100669027;
+			remoteInfo = majikichishatter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C80328A125B4CEAA9D801FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0531B60EDC34AAFB4DDBEDC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D4C93FDD186BE45100669027 /* majikichishatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = majikichishatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C93FE0186BE45100669027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D4C93FE2186BE45100669027 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D4C93FE4186BE45200669027 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D4C93FE8186BE45200669027 /* majikichishatter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "majikichishatter-Info.plist"; sourceTree = "<group>"; };
+		D4C93FEA186BE45200669027 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4C93FEC186BE45200669027 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D4C93FEE186BE45200669027 /* majikichishatter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "majikichishatter-Prefix.pch"; sourceTree = "<group>"; };
+		D4C93FEF186BE45200669027 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D4C93FF0186BE45200669027 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D4C93FF2186BE45200669027 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D4C93FF8186BE45200669027 /* majikichishatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = majikichishatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C93FF9186BE45200669027 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D4C94001186BE45200669027 /* majikichishatterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "majikichishatterTests-Info.plist"; sourceTree = "<group>"; };
+		D4C94003186BE45200669027 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D4C94005186BE45200669027 /* majikichishatterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = majikichishatterTests.m; sourceTree = "<group>"; };
+		D4C9400F186BE4EB00669027 /* FaceDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetection.h; sourceTree = "<group>"; };
+		D4C94010186BE4EB00669027 /* FaceDetection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetection.mm; sourceTree = "<group>"; };
+		D4C94012186BE67C00669027 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = majikichishatter/opencv2.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4C93FDA186BE45100669027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C94013186BE67C00669027 /* opencv2.framework in Frameworks */,
+				D4C93FE3186BE45100669027 /* CoreGraphics.framework in Frameworks */,
+				D4C93FE5186BE45200669027 /* UIKit.framework in Frameworks */,
+				D4C93FE1186BE45100669027 /* Foundation.framework in Frameworks */,
+				F3E03847D6B9498695562C90 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4C93FF5186BE45200669027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C93FFA186BE45200669027 /* XCTest.framework in Frameworks */,
+				D4C93FFC186BE45200669027 /* UIKit.framework in Frameworks */,
+				D4C93FFB186BE45200669027 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4C93FD4186BE45100669027 = {
+			isa = PBXGroup;
+			children = (
+				D4C93FE6186BE45200669027 /* majikichishatter */,
+				D4C93FFF186BE45200669027 /* majikichishatterTests */,
+				D4C93FDF186BE45100669027 /* Frameworks */,
+				D4C93FDE186BE45100669027 /* Products */,
+				A0531B60EDC34AAFB4DDBEDC /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		D4C93FDE186BE45100669027 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4C93FDD186BE45100669027 /* majikichishatter.app */,
+				D4C93FF8186BE45200669027 /* majikichishatterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4C93FDF186BE45100669027 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4C94012186BE67C00669027 /* opencv2.framework */,
+				D4C93FE0186BE45100669027 /* Foundation.framework */,
+				D4C93FE2186BE45100669027 /* CoreGraphics.framework */,
+				D4C93FE4186BE45200669027 /* UIKit.framework */,
+				D4C93FF9186BE45200669027 /* XCTest.framework */,
+				3C80328A125B4CEAA9D801FD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4C93FE6186BE45200669027 /* majikichishatter */ = {
+			isa = PBXGroup;
+			children = (
+				D4C93FEF186BE45200669027 /* AppDelegate.h */,
+				D4C93FF0186BE45200669027 /* AppDelegate.m */,
+				D4C9400F186BE4EB00669027 /* FaceDetection.h */,
+				D4C94010186BE4EB00669027 /* FaceDetection.mm */,
+				D4C93FF2186BE45200669027 /* Images.xcassets */,
+				D4C93FE7186BE45200669027 /* Supporting Files */,
+			);
+			path = majikichishatter;
+			sourceTree = "<group>";
+		};
+		D4C93FE7186BE45200669027 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4C93FE8186BE45200669027 /* majikichishatter-Info.plist */,
+				D4C93FE9186BE45200669027 /* InfoPlist.strings */,
+				D4C93FEC186BE45200669027 /* main.m */,
+				D4C93FEE186BE45200669027 /* majikichishatter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4C93FFF186BE45200669027 /* majikichishatterTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4C94005186BE45200669027 /* majikichishatterTests.m */,
+				D4C94000186BE45200669027 /* Supporting Files */,
+			);
+			path = majikichishatterTests;
+			sourceTree = "<group>";
+		};
+		D4C94000186BE45200669027 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4C94001186BE45200669027 /* majikichishatterTests-Info.plist */,
+				D4C94002186BE45200669027 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4C93FDC186BE45100669027 /* majikichishatter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4C94009186BE45200669027 /* Build configuration list for PBXNativeTarget "majikichishatter" */;
+			buildPhases = (
+				610175AA314B4959B6F6B270 /* Check Pods Manifest.lock */,
+				D4C93FD9186BE45100669027 /* Sources */,
+				D4C93FDA186BE45100669027 /* Frameworks */,
+				D4C93FDB186BE45100669027 /* Resources */,
+				89A844B0CE484752A88E4851 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = majikichishatter;
+			productName = majikichishatter;
+			productReference = D4C93FDD186BE45100669027 /* majikichishatter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4C93FF7186BE45200669027 /* majikichishatterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4C9400C186BE45200669027 /* Build configuration list for PBXNativeTarget "majikichishatterTests" */;
+			buildPhases = (
+				D4C93FF4186BE45200669027 /* Sources */,
+				D4C93FF5186BE45200669027 /* Frameworks */,
+				D4C93FF6186BE45200669027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4C93FFE186BE45200669027 /* PBXTargetDependency */,
+			);
+			name = majikichishatterTests;
+			productName = majikichishatterTests;
+			productReference = D4C93FF8186BE45200669027 /* majikichishatterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4C93FD5186BE45100669027 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Kazuki Taniguchi";
+				TargetAttributes = {
+					D4C93FF7186BE45200669027 = {
+						TestTargetID = D4C93FDC186BE45100669027;
+					};
+				};
+			};
+			buildConfigurationList = D4C93FD8186BE45100669027 /* Build configuration list for PBXProject "majikichishatter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D4C93FD4186BE45100669027;
+			productRefGroup = D4C93FDE186BE45100669027 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4C93FDC186BE45100669027 /* majikichishatter */,
+				D4C93FF7186BE45200669027 /* majikichishatterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4C93FDB186BE45100669027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C93FEB186BE45200669027 /* InfoPlist.strings in Resources */,
+				D4C93FF3186BE45200669027 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4C93FF6186BE45200669027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C94004186BE45200669027 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		610175AA314B4959B6F6B270 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		89A844B0CE484752A88E4851 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4C93FD9186BE45100669027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C94011186BE4EB00669027 /* FaceDetection.mm in Sources */,
+				D4C93FF1186BE45200669027 /* AppDelegate.m in Sources */,
+				D4C93FED186BE45200669027 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4C93FF4186BE45200669027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C94006186BE45200669027 /* majikichishatterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4C93FFE186BE45200669027 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4C93FDC186BE45100669027 /* majikichishatter */;
+			targetProxy = D4C93FFD186BE45200669027 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4C93FE9186BE45200669027 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C93FEA186BE45200669027 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D4C94002186BE45200669027 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C94003186BE45200669027 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4C94007186BE45200669027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4C94008186BE45200669027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4C9400A186BE45200669027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0531B60EDC34AAFB4DDBEDC /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Kazuki/dev/product/majikitishatter/majikichishatter/majikichishatter,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "majikichishatter/majikichishatter-Prefix.pch";
+				INFOPLIST_FILE = "majikichishatter/majikichishatter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D4C9400B186BE45200669027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0531B60EDC34AAFB4DDBEDC /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Kazuki/dev/product/majikitishatter/majikichishatter/majikichishatter,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "majikichishatter/majikichishatter-Prefix.pch";
+				INFOPLIST_FILE = "majikichishatter/majikichishatter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D4C9400D186BE45200669027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/majikichishatter.app/majikichishatter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "majikichishatter/majikichishatter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "majikichishatterTests/majikichishatterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D4C9400E186BE45200669027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/majikichishatter.app/majikichishatter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "majikichishatter/majikichishatter-Prefix.pch";
+				INFOPLIST_FILE = "majikichishatterTests/majikichishatterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4C93FD8186BE45100669027 /* Build configuration list for PBXProject "majikichishatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C94007186BE45200669027 /* Debug */,
+				D4C94008186BE45200669027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4C94009186BE45200669027 /* Build configuration list for PBXNativeTarget "majikichishatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C9400A186BE45200669027 /* Debug */,
+				D4C9400B186BE45200669027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4C9400C186BE45200669027 /* Build configuration list for PBXNativeTarget "majikichishatterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C9400D186BE45200669027 /* Debug */,
+				D4C9400E186BE45200669027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4C93FD5186BE45100669027 /* Project object */;
+}

@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface FaceDetection : NSObject
 
-- (cv::Mat)cvMatFromUIImage:(UIImage *)image;
+- (NSInteger)getFacesNumber:(UIImage*)image;
+
+- (IplImage*)IplImageFromUIImage:(UIImage*)image;
+- (UIImage*)UIImageFromIplImage:(IplImage*)image;
 
 @end
