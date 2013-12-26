@@ -21,6 +21,7 @@
 @end
 
 @implementation CameraViewController
+@synthesize num;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

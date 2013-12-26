@@ -10,4 +10,5 @@
 
 @interface CameraViewController : UIViewController
 
+@property (nonatomic)int num;
 @end
