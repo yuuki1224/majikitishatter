@@ -20,6 +20,7 @@
 @end
 
 @implementation CameraViewController
+@synthesize num;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +33,7 @@
 
 - (void)viewDidLoad
 {
+    
     // 撮影ボタンを配置したツールバーを生成
     UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
     UIBarButtonItem *takePhotoButton = [[UIBarButtonItem alloc] initWithTitle:@"撮影"
