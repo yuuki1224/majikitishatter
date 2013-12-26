@@ -12,7 +12,9 @@
 		BAF00BB5186BFA1200219390 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB4186BFA1200219390 /* CoreVideo.framework */; };
 		BAF00BB7186BFA4100219390 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB6186BFA4100219390 /* AVFoundation.framework */; };
 		BAF00BBA186BFB4600219390 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF00BB9186BFB4600219390 /* CameraViewController.m */; };
+		D47351BA186C0A3000E36F3A /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D47351B9186C0A3000E36F3A /* libc++.dylib */; };
 		D47CCC34186BF75400D4F822 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47CCC33186BF75400D4F822 /* SettingViewController.m */; };
+		D47CCC36186BFE9100D4F822 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47CCC35186BFE9100D4F822 /* CoreImage.framework */; };
 		D4C93FE1186BE45100669027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE0186BE45100669027 /* Foundation.framework */; };
 		D4C93FE3186BE45100669027 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE2186BE45100669027 /* CoreGraphics.framework */; };
 		D4C93FE5186BE45200669027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE4186BE45200669027 /* UIKit.framework */; };
@@ -26,8 +28,6 @@
 		D4C94004186BE45200669027 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4C94002186BE45200669027 /* InfoPlist.strings */; };
 		D4C94006186BE45200669027 /* majikichishatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C94005186BE45200669027 /* majikichishatterTests.m */; };
 		D4C94011186BE4EB00669027 /* FaceDetection.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4C94010186BE4EB00669027 /* FaceDetection.mm */; };
-		D4C94013186BE67C00669027 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C94012186BE67C00669027 /* opencv2.framework */; };
-		F3E03847D6B9498695562C90 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C80328A125B4CEAA9D801FD /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,10 @@
 		BAF00BB6186BFA4100219390 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BAF00BB8186BFB4600219390 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BAF00BB9186BFB4600219390 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		D47351B9186C0A3000E36F3A /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		D47CCC32186BF75400D4F822 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		D47CCC33186BF75400D4F822 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		D47CCC35186BFE9100D4F822 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		D4C93FDD186BE45100669027 /* majikichishatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = majikichishatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C93FE0186BE45100669027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D4C93FE2186BE45100669027 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +72,7 @@
 		D4C9400F186BE4EB00669027 /* FaceDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceDetection.h; sourceTree = "<group>"; };
 		D4C94010186BE4EB00669027 /* FaceDetection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetection.mm; sourceTree = "<group>"; };
 		D4C94012186BE67C00669027 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = majikichishatter/opencv2.framework; sourceTree = "<group>"; };
+		D4D08017186C015000B5FA02 /* libPods-OpenCV.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-OpenCV.a"; path = "Pods/build/Debug-iphoneos/libPods-OpenCV.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,15 +80,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47351BA186C0A3000E36F3A /* libc++.dylib in Frameworks */,
+				D47CCC36186BFE9100D4F822 /* CoreImage.framework in Frameworks */,
 				BAF00BB7186BFA4100219390 /* AVFoundation.framework in Frameworks */,
 				BAF00BB5186BFA1200219390 /* CoreVideo.framework in Frameworks */,
 				BAF00BB3186BFA0600219390 /* CoreMedia.framework in Frameworks */,
 				BAF00BB1186BF9FA00219390 /* AudioToolbox.framework in Frameworks */,
-				D4C94013186BE67C00669027 /* opencv2.framework in Frameworks */,
 				D4C93FE3186BE45100669027 /* CoreGraphics.framework in Frameworks */,
 				D4C93FE5186BE45200669027 /* UIKit.framework in Frameworks */,
 				D4C93FE1186BE45100669027 /* Foundation.framework in Frameworks */,
-				F3E03847D6B9498695562C90 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +128,9 @@
 		D4C93FDF186BE45100669027 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D47351B9186C0A3000E36F3A /* libc++.dylib */,
+				D4D08017186C015000B5FA02 /* libPods-OpenCV.a */,
+				D47CCC35186BFE9100D4F822 /* CoreImage.framework */,
 				BAF00BB6186BFA4100219390 /* AVFoundation.framework */,
 				BAF00BB4186BFA1200219390 /* CoreVideo.framework */,
 				BAF00BB2186BFA0500219390 /* CoreMedia.framework */,
@@ -367,7 +373,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -407,7 +413,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
-				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
