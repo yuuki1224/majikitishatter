@@ -11,6 +11,7 @@
 		BAF00BB3186BFA0600219390 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB2186BFA0500219390 /* CoreMedia.framework */; };
 		BAF00BB5186BFA1200219390 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB4186BFA1200219390 /* CoreVideo.framework */; };
 		BAF00BB7186BFA4100219390 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB6186BFA4100219390 /* AVFoundation.framework */; };
+		BAF00BBA186BFB4600219390 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF00BB9186BFB4600219390 /* CameraViewController.m */; };
 		D47CCC34186BF75400D4F822 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47CCC33186BF75400D4F822 /* SettingViewController.m */; };
 		D4C93FE1186BE45100669027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE0186BE45100669027 /* Foundation.framework */; };
 		D4C93FE3186BE45100669027 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE2186BE45100669027 /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 		BAF00BB2186BFA0500219390 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		BAF00BB4186BFA1200219390 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		BAF00BB6186BFA4100219390 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BAF00BB8186BFB4600219390 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		BAF00BB9186BFB4600219390 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		D47CCC32186BF75400D4F822 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		D47CCC33186BF75400D4F822 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		D4C93FDD186BE45100669027 /* majikichishatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = majikichishatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +148,8 @@
 				D4C94010186BE4EB00669027 /* FaceDetection.mm */,
 				D47CCC32186BF75400D4F822 /* SettingViewController.h */,
 				D47CCC33186BF75400D4F822 /* SettingViewController.m */,
+				BAF00BB8186BFB4600219390 /* CameraViewController.h */,
+				BAF00BB9186BFB4600219390 /* CameraViewController.m */,
 				D4C93FF2186BE45200669027 /* Images.xcassets */,
 				D4C93FE7186BE45200669027 /* Supporting Files */,
 			);
@@ -310,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF00BBA186BFB4600219390 /* CameraViewController.m in Sources */,
 				D4C94011186BE4EB00669027 /* FaceDetection.mm in Sources */,
 				D4C93FF1186BE45200669027 /* AppDelegate.m in Sources */,
 				D4C93FED186BE45200669027 /* main.m in Sources */,
