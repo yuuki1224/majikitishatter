@@ -8,6 +8,7 @@
 
 #import "CameraViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import "FaceDetection.h"
 
 @interface CameraViewController ()
 
@@ -85,6 +86,9 @@
 
 - (void)takePhoto:(id)sender
 {
+    NSInteger count = 0;
+    int setting_count = 0;
+    
     // ビデオ入力のAVCaptureConnectionを取得
     AVCaptureConnection *videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
     
@@ -106,8 +110,20 @@
          // JPEGデータからUIImageを作成
          UIImage *image = [[UIImage alloc] initWithData:imageData];
          
-         // アルバムに画像を保存
-         UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+         //FaceDetectionにUIImageを送る
+         //getFacesNumber関数に送る
+         FaceDetection *fd;// = [FaceDetection alloc];
+         //count =
+         count = [fd getFacesNumber:image];
+         
+         if (count == setting_count){
+             //音声
+             
+             //画像取得
+             
+             // アルバムに画像を保存
+             UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+         }
      }];
 }
 

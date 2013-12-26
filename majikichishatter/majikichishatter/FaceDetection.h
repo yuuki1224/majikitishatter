@@ -12,7 +12,6 @@
 @interface FaceDetection : NSObject
 
 - (NSInteger)getFacesNumber:(UIImage*)image;
-
 - (IplImage*)IplImageFromUIImage:(UIImage*)image;
 - (UIImage*)UIImageFromIplImage:(IplImage*)image;
 
