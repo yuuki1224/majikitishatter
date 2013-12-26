@@ -41,15 +41,8 @@
         triangleImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 25)/2, 85, 25, 21);
         [self.view addSubview: triangleImageView];
         
-        //ルーレット
-        UIImage *roulette = [UIImage imageNamed:@"roulette"];
-        UIImageView *rouletteImageView = [[UIImageView alloc]initWithImage: roulette];
-        rouletteImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 250)/2, 117, 250, 250);
-        [self.view addSubview: rouletteImageView];
-        //rouletteImageView.layer.transform = CGAffineTransformMakeRotation(1.5);
-        
         //真ん中のラベル
-        UILabel *centerLabel = [[UILabel alloc]init];
+        centerLabel = [[UILabel alloc]init];
         centerLabel.textColor = [UIColor whiteColor];
         centerLabel.font = centerFont;
         centerLabel.text = @"1";
@@ -67,6 +60,27 @@
     return self;
 }
 
+-(void) didRotationGesture:(UIRotationGestureRecognizer*) sender {
+	UIRotationGestureRecognizer* rg = (UIRotationGestureRecognizer*) sender;
+	NSLog(@"rotate:%f", rg.rotation);
+    switch ((int)rg.rotation%15) {
+        case 0:
+            centerLabel.text = @"	";
+            break;
+        case 1:
+            break;
+            
+        default:
+            break;
+    }
+    //[rouletteImageView setTransform:CGAffineTransformRotate(rouletteImageView.transform, rg.rotation)];
+    CGFloat rotation = [sender rotation];
+    
+    // imgViewは回転対象のUIImageView。
+    // CGAffineTransformMakeRotation関数を利用して、移動したradian分、imgViewを回転させる
+    rouletteImageView.transform = CGAffineTransformMakeRotation(rotation);
+}
+
 - (void)tapped:(UITapGestureRecognizer *)sender {
     CameraViewController *cs = [[CameraViewController alloc]init];
     UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
@@ -77,6 +91,14 @@
 
 - (void)viewDidLoad
 {
+    //ルーレット
+    UIImage *roulette = [UIImage imageNamed:@"roulette"];
+    rouletteImageView = [[UIImageView alloc]initWithImage: roulette];
+    rouletteImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 250)/2, 117, 250, 250);
+    [self.view addSubview: rouletteImageView];
+    rouletteImageView.userInteractionEnabled = YES;
+    UIRotationGestureRecognizer* rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(didRotationGesture:)];
+    [rouletteImageView addGestureRecognizer: rotationGesture];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
