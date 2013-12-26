@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D47CCC34186BF75400D4F822 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47CCC33186BF75400D4F822 /* SettingViewController.m */; };
 		D4C93FE1186BE45100669027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE0186BE45100669027 /* Foundation.framework */; };
 		D4C93FE3186BE45100669027 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE2186BE45100669027 /* CoreGraphics.framework */; };
 		D4C93FE5186BE45200669027 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE4186BE45200669027 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* Begin PBXFileReference section */
 		3C80328A125B4CEAA9D801FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0531B60EDC34AAFB4DDBEDC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D47CCC32186BF75400D4F822 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		D47CCC33186BF75400D4F822 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		D4C93FDD186BE45100669027 /* majikichishatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = majikichishatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C93FE0186BE45100669027 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D4C93FE2186BE45100669027 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 				D4C93FF0186BE45200669027 /* AppDelegate.m */,
 				D4C9400F186BE4EB00669027 /* FaceDetection.h */,
 				D4C94010186BE4EB00669027 /* FaceDetection.mm */,
+				D47CCC32186BF75400D4F822 /* SettingViewController.h */,
+				D47CCC33186BF75400D4F822 /* SettingViewController.m */,
 				D4C93FF2186BE45200669027 /* Images.xcassets */,
 				D4C93FE7186BE45200669027 /* Supporting Files */,
 			);
@@ -292,6 +297,7 @@
 				D4C94011186BE4EB00669027 /* FaceDetection.mm in Sources */,
 				D4C93FF1186BE45200669027 /* AppDelegate.m in Sources */,
 				D4C93FED186BE45200669027 /* main.m in Sources */,
+				D47CCC34186BF75400D4F822 /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
