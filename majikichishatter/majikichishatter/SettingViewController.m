@@ -8,6 +8,7 @@
 #define SCREEN_BOUNDS   ([UIScreen mainScreen].bounds)
 
 #import "SettingViewController.h"
+#import "CameraViewController.h"
 
 @interface SettingViewController ()
 
@@ -22,7 +23,7 @@
         self.view.backgroundColor = [UIColor colorWithRed:0.600 green:0.157 blue:0.224 alpha:1.0];
         // Custom initialization
         UIFont *font = [UIFont fontWithName:@"HiraKakuProN-W3" size:15.0f];
-        UIFont *centerFont = [UIFont fontWithName:@"HiraKakuProN-W3" size:20.0f];
+        UIFont *centerFont = [UIFont fontWithName:@"HiraKakuProN-W3" size:24.0f];
         
         //上の文字
         UILabel *label = [[UILabel alloc]init];
@@ -51,15 +52,36 @@
         centerLabel.font = centerFont;
         centerLabel.text = @"1";
         [centerLabel sizeToFit];
-        centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 240, centerLabel.frame.size.width, centerLabel.frame.size.height);
+        centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 220, centerLabel.frame.size.width, centerLabel.frame.size.height);
         [self.view addSubview: centerLabel];
         
         //下のボタン
+        /*
         UIButton *button = [UIButton buttonWithType: UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:@"roulette"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
+        [button setTitle:@"決定" forState:UIControlStateNormal];
+        button.frame = CGRectMake((SCREEN_BOUNDS.size.width - 90)/2, 450, 90, 38);
+        UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+        [button addGestureRecognizer:tapGesture];
         [self.view addSubview: button];
+         */
+        
+        UIImageView *button = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"button"]];
+        button.frame = CGRectMake((SCREEN_BOUNDS.size.width - 90)/2, 450, 90, 38);
+        [self.view addSubview: button];
+        button.userInteractionEnabled = YES;
+        UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+        [button addGestureRecognizer:tapGesture];
     }
     return self;
+}
+
+- (void)tapped:(UITapGestureRecognizer *)sender {
+    CameraViewController *cs = [[CameraViewController alloc]init];
+    UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
+    rootViewController.modalPresentationStyle = UIModalPresentationFormSheet;
+    rootViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:cs animated:YES completion:nil];
 }
 
 - (void)viewDidLoad
