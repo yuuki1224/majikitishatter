@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "SettingViewController.h"
+//#import "SettingViewController.h"
+#import "CameraViewController.h"
 
 @implementation AppDelegate
 
@@ -17,7 +18,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    SettingViewController *sc = [[SettingViewController alloc]init];
+    //SettingViewController *sc = [[SettingViewController alloc]init];
+    CameraViewController *sc = [[CameraViewController alloc]init];
     [self.window addSubview: sc.view];
     
     [self.window makeKeyAndVisible];

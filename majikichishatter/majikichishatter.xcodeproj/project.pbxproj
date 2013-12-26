@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290DF471186C06B600EAA038 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 290DF470186C06B600EAA038 /* opencv2.framework */; };
 		BAF00BB1186BF9FA00219390 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB0186BF9FA00219390 /* AudioToolbox.framework */; };
 		BAF00BB3186BFA0600219390 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB2186BFA0500219390 /* CoreMedia.framework */; };
 		BAF00BB5186BFA1200219390 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB4186BFA1200219390 /* CoreVideo.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290DF470186C06B600EAA038 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = Pods/OpenCV/opencv2.framework; sourceTree = "<group>"; };
 		3C80328A125B4CEAA9D801FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0531B60EDC34AAFB4DDBEDC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		BAF00BB0186BF9FA00219390 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				290DF471186C06B600EAA038 /* opencv2.framework in Frameworks */,
 				BAF00BB7186BFA4100219390 /* AVFoundation.framework in Frameworks */,
 				BAF00BB5186BFA1200219390 /* CoreVideo.framework in Frameworks */,
 				BAF00BB3186BFA0600219390 /* CoreMedia.framework in Frameworks */,
@@ -125,6 +128,7 @@
 		D4C93FDF186BE45100669027 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				290DF470186C06B600EAA038 /* opencv2.framework */,
 				BAF00BB6186BFA4100219390 /* AVFoundation.framework */,
 				BAF00BB4186BFA1200219390 /* CoreVideo.framework */,
 				BAF00BB2186BFA0500219390 /* CoreMedia.framework */,
@@ -444,6 +448,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Kazuki/dev/product/majikitishatter/majikichishatter/majikichishatter,
+					/Users/ryoga/Dropbox/ChristmasHackason/MS2/majikitishatter/majikichishatter/Pods/OpenCV,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "majikichishatter/majikichishatter-Prefix.pch";
@@ -462,6 +467,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Kazuki/dev/product/majikitishatter/majikichishatter/majikichishatter,
+					/Users/ryoga/Dropbox/ChristmasHackason/MS2/majikitishatter/majikichishatter/Pods/OpenCV,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "majikichishatter/majikichishatter-Prefix.pch";
