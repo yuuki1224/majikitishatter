@@ -40,7 +40,7 @@
                                                                        action:@selector(takePhoto:)];
     toolbar.items = @[takePhotoButton];
     [self.view addSubview:toolbar];
-    
+    NSLog(@"hoge");
     // プレビュー用のビューを生成
     self.previewView = [[UIView alloc] initWithFrame:CGRectMake(0,
                                                                 toolbar.frame.size.height,
@@ -86,9 +86,9 @@
 
 - (void)takePhoto:(id)sender
 {
-    NSInteger count = 0;
+    __block NSInteger count = 0;
     int setting_count = 0;
-    
+    NSLog(@"takePhoto");
     // ビデオ入力のAVCaptureConnectionを取得
     AVCaptureConnection *videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
     
@@ -112,18 +112,20 @@
          
          //FaceDetectionにUIImageを送る
          //getFacesNumber関数に送る
-         FaceDetection *fd;// = [FaceDetection alloc];
-         //count =
+         FaceDetection *fd = [[FaceDetection alloc] init];
          count = [fd getFacesNumber:image];
-         
+         NSLog(@"hoge");
          if (count == setting_count){
              //音声
-             
+             NSLog(@"onse");
              //画像取得
              
              // アルバムに画像を保存
              UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
          }
+         // アルバムに画像を保存
+         UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+         [NSThread sleepForTimeInterval:1.0f];
      }];
 }
 

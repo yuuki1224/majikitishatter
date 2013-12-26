@@ -18,8 +18,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    SettingViewController *sc = [[SettingViewController alloc]init];
-    //CameraViewController *sc = [[CameraViewController alloc]init];
+    //SettingViewController *sc = [[SettingViewController alloc]init];
+    CameraViewController *sc = [[CameraViewController alloc]init];
     [self.window addSubview: sc.view];
     
     [self.window makeKeyAndVisible];
