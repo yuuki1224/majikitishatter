@@ -13,6 +13,7 @@
 // 撮影中の画像から顔の数を計算して返す
 - (NSInteger)getFacesNumber:(UIImage*)image {
 
+    NSLog(@"hoge");
     NSInteger numFaces = 0;
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"haarcascade_frontalface_default" ofType:@"xml"];

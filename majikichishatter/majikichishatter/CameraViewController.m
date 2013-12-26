@@ -55,7 +55,7 @@
 - (void)setupAVCapture
 {
     NSError *error = nil;
-    
+    NSLog(@"hoge");
     // 入力と出力からキャプチャーセッションを作成
     self.session = [[AVCaptureSession alloc] init];
     
@@ -65,7 +65,7 @@
     // カメラからの入力を作成し、セッションに追加
     self.videoInput = [[AVCaptureDeviceInput alloc] initWithDevice:camera error:&error];
     [self.session addInput:self.videoInput];
-    
+    NSLog(@"hoge");
     // 画像への出力を作成し、セッションに追加
     self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
     [self.session addOutput:self.stillImageOutput];
@@ -79,7 +79,7 @@
     CALayer *previewLayer = self.previewView.layer;
     previewLayer.masksToBounds = YES;
     [previewLayer addSublayer:captureVideoPreviewLayer];
-    
+    NSLog(@"hoge");
     // セッション開始
     [self.session startRunning];
 }
@@ -87,7 +87,7 @@
 - (void)takePhoto:(id)sender
 {
     __block NSInteger count = 0;
-    int setting_count = 0;
+    int setting_count = 3;
     NSLog(@"takePhoto");
     // ビデオ入力のAVCaptureConnectionを取得
     AVCaptureConnection *videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
@@ -109,7 +109,8 @@
          
          // JPEGデータからUIImageを作成
          UIImage *image = [[UIImage alloc] initWithData:imageData];
-         
+         NSLog(@"hoge");
+
          //FaceDetectionにUIImageを送る
          //getFacesNumber関数に送る
          FaceDetection *fd = [[FaceDetection alloc] init];
