@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9B89B794-02E8-4069-89A5-8FAE215BEA7E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>majikichishatter</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C8280278-2C88-4CCF-8236-2FAB51B90BDD</key>
+		<string>ssh://github.com/yuuki1224/majikitishatter.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>majikichishatter/majikichishatter.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C8280278-2C88-4CCF-8236-2FAB51B90BDD</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/yuuki1224/majikitishatter.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C8280278-2C88-4CCF-8236-2FAB51B90BDD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C8280278-2C88-4CCF-8236-2FAB51B90BDD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>majikitishatter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
