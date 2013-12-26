@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) AVCaptureDeviceInput *videoInput;
 @property (strong, nonatomic) AVCaptureStillImageOutput *stillImageOutput;
-@property (strong, nonatomic) AVCaptureVideoDataOutput *VideoDataOutput;
+//@property (strong, nonatomic) AVCaptureVideoDataOutput *VideoDataOutput;
 @property (strong, nonatomic) AVCaptureSession *session;
 @property (strong, nonatomic) UIView *previewView;
 
@@ -88,7 +88,7 @@
     self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
     //self.VideoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
     [self.session addOutput:self.stillImageOutput];
-    [self.session addOutput:self.VideoDataOutput];
+    //[self.session addOutput:self.VideoDataOutput];
     
     // キャプチャーセッションから入力のプレビュー表示を作成
     AVCaptureVideoPreviewLayer *captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
@@ -107,7 +107,7 @@
 - (void)takePhoto:(id)sender
 {
     __block NSInteger count = 0;
-    int setting_count = 2;
+    //int setting_count = 2;
     NSLog(@"takePhoto");
     // ビデオ入力のAVCaptureConnectionを取得
     AVCaptureConnection *videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
@@ -137,13 +137,27 @@
          FaceDetection *fd = [[FaceDetection alloc] init];
          count = [fd getFacesNumber:image];
          NSLog(@"count is %d", count);
-         if (count == setting_count){
+         if (count == num){
              //音声
              NSLog(@"onse");
              //画像取得
-             
-             //アルバムに画像を保存
-             UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+             // ビデオ入力のAVCaptureConnectionを取得
+             AVCaptureConnection *videoConnectionFA = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
+             [self.stillImageOutput
+              captureStillImageAsynchronouslyFromConnection:videoConnectionFA
+              completionHandler:^(CMSampleBufferRef imageDataSampleBufferFA, NSError *error) {
+                    if (imageDataSampleBufferFA == NULL) {
+                        return;
+                    }
+                    // 入力された画像データからJPEGフォーマットとしてデータを取得
+                    NSData *imageDataFA = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBufferFA];
+                  
+                    // JPEGデータからUIImageを作成
+                    UIImage *imageFA = [[UIImage alloc] initWithData:imageDataFA];
+              
+                    //アルバムに画像を保存
+                    UIImageWriteToSavedPhotosAlbum(imageFA, self, nil, nil);
+                  }];
          }
          /*
          // アルバムに画像を保存
