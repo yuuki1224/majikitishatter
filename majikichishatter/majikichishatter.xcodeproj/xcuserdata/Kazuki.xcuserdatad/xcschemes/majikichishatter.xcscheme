@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D496C809186BDEA400D300F1"
+               BlueprintIdentifier = "D4CF47D6186BE18500999B00"
                BuildableName = "majikichishatter.app"
                BlueprintName = "majikichishatter"
                ReferencedContainer = "container:majikichishatter.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D496C82D186BDEA400D300F1"
+               BlueprintIdentifier = "D4CF47FA186BE18500999B00"
                BuildableName = "majikichishatterTests.xctest"
                BlueprintName = "majikichishatterTests"
                ReferencedContainer = "container:majikichishatter.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D496C809186BDEA400D300F1"
+            BlueprintIdentifier = "D4CF47D6186BE18500999B00"
             BuildableName = "majikichishatter.app"
             BlueprintName = "majikichishatter"
             ReferencedContainer = "container:majikichishatter.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D496C809186BDEA400D300F1"
+            BlueprintIdentifier = "D4CF47D6186BE18500999B00"
             BuildableName = "majikichishatter.app"
             BlueprintName = "majikichishatter"
             ReferencedContainer = "container:majikichishatter.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D496C809186BDEA400D300F1"
+            BlueprintIdentifier = "D4CF47D6186BE18500999B00"
             BuildableName = "majikichishatter.app"
             BlueprintName = "majikichishatter"
             ReferencedContainer = "container:majikichishatter.xcodeproj">
