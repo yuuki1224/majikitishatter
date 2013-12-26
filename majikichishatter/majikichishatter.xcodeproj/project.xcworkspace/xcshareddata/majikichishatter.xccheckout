@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>DB36AA2F-E4ED-499B-B71A-527F3884B81E</string>
+	<string>15984A7E-6DFA-4D9A-A71D-BCFD4197097E</string>
 	<key>IDESourceControlProjectName</key>
 	<string>majikichishatter</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F43121A2-E1D0-462F-A3E2-3513CBA72C51</key>
+		<key>6ACB9D3B-0D5C-4FB2-BFEE-7304F3DD9D07</key>
 		<string>ssh://github.com/yuuki1224/majikitishatter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>majikichishatter/majikichishatter.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F43121A2-E1D0-462F-A3E2-3513CBA72C51</key>
+		<key>6ACB9D3B-0D5C-4FB2-BFEE-7304F3DD9D07</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F43121A2-E1D0-462F-A3E2-3513CBA72C51</string>
+	<string>6ACB9D3B-0D5C-4FB2-BFEE-7304F3DD9D07</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F43121A2-E1D0-462F-A3E2-3513CBA72C51</string>
+			<string>6ACB9D3B-0D5C-4FB2-BFEE-7304F3DD9D07</string>
 			<key>IDESourceControlWCCName</key>
 			<string>majikitishatter</string>
 		</dict>
