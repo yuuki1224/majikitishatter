@@ -50,6 +50,16 @@
     
     // 撮影開始
     [self setupAVCapture];
+    
+    // タイマーの生成例
+    NSTimer *tm =
+    [NSTimer
+     　scheduledTimerWithTimeInterval:1.5f
+     　target:self
+     　selector:@selector(hogeMethod:)
+     　userInfo:nil
+     　repeats:YES
+     ];
 }
 
 - (void)setupAVCapture
@@ -87,7 +97,7 @@
 - (void)takePhoto:(id)sender
 {
     __block NSInteger count = 0;
-    int setting_count = 3;
+    int setting_count = 2;
     NSLog(@"takePhoto");
     // ビデオ入力のAVCaptureConnectionを取得
     AVCaptureConnection *videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
@@ -115,18 +125,20 @@
          //getFacesNumber関数に送る
          FaceDetection *fd = [[FaceDetection alloc] init];
          count = [fd getFacesNumber:image];
-         NSLog(@"hoge");
+         NSLog(@"count is %d", count);
          if (count == setting_count){
              //音声
              NSLog(@"onse");
              //画像取得
              
-             // アルバムに画像を保存
+             //アルバムに画像を保存
              UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
          }
+         /*
          // アルバムに画像を保存
          UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
          [NSThread sleepForTimeInterval:1.0f];
+          */
      }];
 }
 
