@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingViewController : UIViewController
+@interface SettingViewController : UIViewController {
+    UIImageView *rouletteImageView;
+    UILabel *centerLabel;
+}
 
 @end
