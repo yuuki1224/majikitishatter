@@ -44,7 +44,7 @@
         //ルーレット
         UIImage *roulette = [UIImage imageNamed:@"roulette"];
         UIImageView *rouletteImageView = [[UIImageView alloc]initWithImage: roulette];
-        rouletteImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 250)/2, 107, 250, 250);
+        rouletteImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 250)/2, 117, 250, 250);
         [self.view addSubview: rouletteImageView];
         //rouletteImageView.layer.transform = CGAffineTransformMakeRotation(1.5);
         
@@ -54,7 +54,7 @@
         centerLabel.font = centerFont;
         centerLabel.text = @"1";
         [centerLabel sizeToFit];
-        centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 220, centerLabel.frame.size.width, centerLabel.frame.size.height);
+        centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 230, centerLabel.frame.size.width, centerLabel.frame.size.height);
         [self.view addSubview: centerLabel];
 
         UIImageView *button = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"button"]];
