@@ -17,6 +17,7 @@
 		BAF00BC3186C02F900219390 /* roulette.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF00BBF186C02F900219390 /* roulette.png */; };
 		BAF00BC5186C103400219390 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF00BC4186C103400219390 /* button.png */; };
 		BAF00BC7186C14FC00219390 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BC6186C14FC00219390 /* QuartzCore.framework */; };
+		BAF00BCB186C345100219390 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF00BCA186C345100219390 /* Default@2x.png */; };
 		D47CCC34186BF75400D4F822 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47CCC33186BF75400D4F822 /* SettingViewController.m */; };
 		D4C661CC186C297F00F396A9 /* haarcascade_frontalface_default.xml in Resources */ = {isa = PBXBuildFile; fileRef = D4C661CB186C297F00F396A9 /* haarcascade_frontalface_default.xml */; };
 		D4C93FE1186BE45100669027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE0186BE45100669027 /* Foundation.framework */; };
@@ -58,6 +59,7 @@
 		BAF00BBF186C02F900219390 /* roulette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roulette.png; sourceTree = "<group>"; };
 		BAF00BC4186C103400219390 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		BAF00BC6186C14FC00219390 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BAF00BCA186C345100219390 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D47CCC32186BF75400D4F822 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		D47CCC33186BF75400D4F822 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		D47CCC35186BFE9100D4F822 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -186,6 +188,7 @@
 		D4C93FE7186BE45200669027 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BAF00BCA186C345100219390 /* Default@2x.png */,
 				D4C661CB186C297F00F396A9 /* haarcascade_frontalface_default.xml */,
 				D4C93FE8186BE45200669027 /* majikichishatter-Info.plist */,
 				D4C93FE9186BE45200669027 /* InfoPlist.strings */,
@@ -295,6 +298,7 @@
 				BAF00BC2186C02F900219390 /* point.png in Resources */,
 				D4C93FF3186BE45200669027 /* Images.xcassets in Resources */,
 				D4C661CC186C297F00F396A9 /* haarcascade_frontalface_default.xml in Resources */,
+				BAF00BCB186C345100219390 /* Default@2x.png in Resources */,
 				BAF00BC3186C02F900219390 /* roulette.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
