@@ -22,19 +22,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.view.backgroundColor = [UIColor colorWithRed:0.600 green:0.157 blue:0.224 alpha:1.0];
-        // Custom initialization
-        UIFont *font = [UIFont fontWithName:@"HiraKakuProN-W3" size:15.0f];
-        UIFont *centerFont = [UIFont fontWithName:@"HiraKakuProN-W3" size:24.0f];
-        
-        //上の文字
-        UILabel *label = [[UILabel alloc]init];
-        label.textColor = [UIColor whiteColor];
-        label.font = font;
-        label.text = @"撮りたい人数を設定してください。";
-        [label sizeToFit];
-        label.frame = CGRectMake((SCREEN_BOUNDS.size.width-label.frame.size.width)/2, 56, label.frame.size.width, label.frame.size.height);
-        [self.view addSubview: label];
-        
         //三角
         UIImage *triangle = [UIImage imageNamed:@"point"];
         UIImageView *triangleImageView = [[UIImageView alloc]initWithImage: triangle];
@@ -53,6 +40,7 @@
 
 - (void)tapped:(UITapGestureRecognizer *)sender {
     CameraViewController *cs = [[CameraViewController alloc]init];
+    cs.num = [centerLabel.text intValue];
     UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
     rootViewController.modalPresentationStyle = UIModalPresentationFormSheet;
     rootViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
@@ -60,12 +48,16 @@
 }
 
 - (void)tappedRoulette:(UITapGestureRecognizer *)sender {
-    centerLabel.text = @"15";
-    NSLog(@"ddd");
+    int num = [centerLabel.text intValue];
+    num++;
+    centerLabel.text = [NSString stringWithFormat:@"%d", num];
+    [centerLabel sizeToFit];
+    centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 230, centerLabel.frame.size.width, centerLabel.frame.size.height);    
 }
 
 - (void)viewDidLoad
 {
+    UIFont *font = [UIFont fontWithName:@"HiraKakuProN-W3" size:15.0f];
     UIFont *centerFont = [UIFont fontWithName:@"HiraKakuProN-W3" size:24.0f];
     //ルーレット
     UIImage *roulette = [UIImage imageNamed:@"roulette"];
@@ -73,8 +65,6 @@
     rouletteImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 250)/2, 117, 250, 250);
     [self.view addSubview: rouletteImageView];
     rouletteImageView.userInteractionEnabled = YES;
-    //UIRotationGestureRecognizer* rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(didRotationGesture:)];
-    //[rouletteImageView addGestureRecognizer: rotationGesture];
     UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedRoulette:)];
     [rouletteImageView addGestureRecognizer:tapGesture];
     
@@ -82,10 +72,19 @@
     centerLabel = [[UILabel alloc]init];
     centerLabel.textColor = [UIColor whiteColor];
     centerLabel.font = centerFont;
+    centerLabel.text = @"1";
     [centerLabel sizeToFit];
     centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 230, centerLabel.frame.size.width, centerLabel.frame.size.height);
     [self.view addSubview: centerLabel];
     
+    //上の文字
+    UILabel *label = [[UILabel alloc]init];
+    label.textColor = [UIColor whiteColor];
+    label.font = font;
+    label.text = @"撮りたい人数を設定してください。";
+    [label sizeToFit];
+    label.frame = CGRectMake((SCREEN_BOUNDS.size.width-label.frame.size.width)/2, 56, label.frame.size.width, label.frame.size.height);
+    [self.view addSubview: label];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
