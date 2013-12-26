@@ -11,6 +11,10 @@
 #import "FaceDetection.h"
 
 @interface CameraViewController ()
+{
+    CFURLRef soundURL;
+    SystemSoundID soundID;
+}
 
 @property (strong, nonatomic) AVCaptureDeviceInput *videoInput;
 @property (strong, nonatomic) AVCaptureStillImageOutput *stillImageOutput;
@@ -34,6 +38,11 @@
 
 - (void)viewDidLoad
 {
+    // 再生するファイルの指定
+    // CFBundleRef mainBundle = CFBundleGetMainBundle();
+    
+    // soundURL = CFBundleCopyResourceURL(mainBundle, CFSTR("voice"), CFSTR("wav"), nil);
+    // AudioServicesCreateSystemSoundID(soundURL, &soundID);
     
     // 撮影ボタンを配置したツールバーを生成
     UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
@@ -139,6 +148,10 @@
          NSLog(@"count is %d", count);
          if (count == num){
              //音声
+             
+             //なんか再生
+             //AudioServicesPlaySystemSound(soundID);
+             
              NSLog(@"onse");
              //画像取得
              // ビデオ入力のAVCaptureConnectionを取得
