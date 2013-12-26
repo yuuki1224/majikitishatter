@@ -40,15 +40,6 @@
         UIImageView *triangleImageView = [[UIImageView alloc]initWithImage: triangle];
         triangleImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 25)/2, 85, 25, 21);
         [self.view addSubview: triangleImageView];
-        
-        //真ん中のラベル
-        centerLabel = [[UILabel alloc]init];
-        centerLabel.textColor = [UIColor whiteColor];
-        centerLabel.font = centerFont;
-        centerLabel.text = @"1";
-        [centerLabel sizeToFit];
-        centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 230, centerLabel.frame.size.width, centerLabel.frame.size.height);
-        [self.view addSubview: centerLabel];
 
         UIImageView *button = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"button"]];
         button.frame = CGRectMake((SCREEN_BOUNDS.size.width - 90)/2, 450, 90, 38);
@@ -60,27 +51,6 @@
     return self;
 }
 
--(void) didRotationGesture:(UIRotationGestureRecognizer*) sender {
-	UIRotationGestureRecognizer* rg = (UIRotationGestureRecognizer*) sender;
-	NSLog(@"rotate:%f", rg.rotation);
-    switch ((int)rg.rotation%15) {
-        case 0:
-            centerLabel.text = @"	";
-            break;
-        case 1:
-            break;
-            
-        default:
-            break;
-    }
-    //[rouletteImageView setTransform:CGAffineTransformRotate(rouletteImageView.transform, rg.rotation)];
-    CGFloat rotation = [sender rotation];
-    
-    // imgViewは回転対象のUIImageView。
-    // CGAffineTransformMakeRotation関数を利用して、移動したradian分、imgViewを回転させる
-    rouletteImageView.transform = CGAffineTransformMakeRotation(rotation);
-}
-
 - (void)tapped:(UITapGestureRecognizer *)sender {
     CameraViewController *cs = [[CameraViewController alloc]init];
     UIViewController *rootViewController = [UIApplication sharedApplication].delegate.window.rootViewController;
@@ -89,16 +59,33 @@
     [self presentViewController:cs animated:YES completion:nil];
 }
 
+- (void)tappedRoulette:(UITapGestureRecognizer *)sender {
+    centerLabel.text = @"15";
+    NSLog(@"ddd");
+}
+
 - (void)viewDidLoad
 {
+    UIFont *centerFont = [UIFont fontWithName:@"HiraKakuProN-W3" size:24.0f];
     //ルーレット
     UIImage *roulette = [UIImage imageNamed:@"roulette"];
     rouletteImageView = [[UIImageView alloc]initWithImage: roulette];
     rouletteImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 250)/2, 117, 250, 250);
     [self.view addSubview: rouletteImageView];
     rouletteImageView.userInteractionEnabled = YES;
-    UIRotationGestureRecognizer* rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(didRotationGesture:)];
-    [rouletteImageView addGestureRecognizer: rotationGesture];
+    //UIRotationGestureRecognizer* rotationGesture = [[UIRotationGestureRecognizer alloc] initWithTarget:self action:@selector(didRotationGesture:)];
+    //[rouletteImageView addGestureRecognizer: rotationGesture];
+    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tappedRoulette:)];
+    [rouletteImageView addGestureRecognizer:tapGesture];
+    
+    //真ん中のラベル
+    centerLabel = [[UILabel alloc]init];
+    centerLabel.textColor = [UIColor whiteColor];
+    centerLabel.font = centerFont;
+    [centerLabel sizeToFit];
+    centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 230, centerLabel.frame.size.width, centerLabel.frame.size.height);
+    [self.view addSubview: centerLabel];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
