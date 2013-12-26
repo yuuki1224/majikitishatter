@@ -9,6 +9,7 @@
 
 #import "SettingViewController.h"
 #import "CameraViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SettingViewController ()
 
@@ -37,7 +38,7 @@
         //三角
         UIImage *triangle = [UIImage imageNamed:@"point"];
         UIImageView *triangleImageView = [[UIImageView alloc]initWithImage: triangle];
-        triangleImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 25)/2, 125, 25, 21);
+        triangleImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 25)/2, 85, 25, 21);
         [self.view addSubview: triangleImageView];
         
         //ルーレット
@@ -45,6 +46,7 @@
         UIImageView *rouletteImageView = [[UIImageView alloc]initWithImage: roulette];
         rouletteImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 250)/2, 107, 250, 250);
         [self.view addSubview: rouletteImageView];
+        //rouletteImageView.layer.transform = CGAffineTransformMakeRotation(1.5);
         
         //真ん中のラベル
         UILabel *centerLabel = [[UILabel alloc]init];
@@ -54,18 +56,7 @@
         [centerLabel sizeToFit];
         centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 220, centerLabel.frame.size.width, centerLabel.frame.size.height);
         [self.view addSubview: centerLabel];
-        
-        //下のボタン
-        /*
-        UIButton *button = [UIButton buttonWithType: UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
-        [button setTitle:@"決定" forState:UIControlStateNormal];
-        button.frame = CGRectMake((SCREEN_BOUNDS.size.width - 90)/2, 450, 90, 38);
-        UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-        [button addGestureRecognizer:tapGesture];
-        [self.view addSubview: button];
-         */
-        
+
         UIImageView *button = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"button"]];
         button.frame = CGRectMake((SCREEN_BOUNDS.size.width - 90)/2, 450, 90, 38);
         [self.view addSubview: button];
