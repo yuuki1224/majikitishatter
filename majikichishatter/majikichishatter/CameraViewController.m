@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) AVCaptureDeviceInput *videoInput;
 @property (strong, nonatomic) AVCaptureStillImageOutput *stillImageOutput;
+@property (strong, nonatomic) AVCaptureVideoDataOutput *VideoDataOutput;
 @property (strong, nonatomic) AVCaptureSession *session;
 @property (strong, nonatomic) UIView *previewView;
 
@@ -32,20 +33,24 @@
 
 - (void)viewDidLoad
 {
+    
     // 撮影ボタンを配置したツールバーを生成
     UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
     UIBarButtonItem *takePhotoButton = [[UIBarButtonItem alloc] initWithTitle:@"撮影"
                                                                         style:UIBarButtonItemStyleBordered
                                                                        target:self
                                                                        action:@selector(takePhoto:)];
+     
     toolbar.items = @[takePhotoButton];
     [self.view addSubview:toolbar];
+    
     NSLog(@"hoge");
     // プレビュー用のビューを生成
     self.previewView = [[UIView alloc] initWithFrame:CGRectMake(0,
                                                                 toolbar.frame.size.height,
                                                                 self.view.bounds.size.width,
                                                                 self.view.bounds.size.height - toolbar.frame.size.height)];
+    
     [self.view addSubview:self.previewView];
     
     // 撮影開始
@@ -54,12 +59,14 @@
     // タイマーの生成例
     NSTimer *tm =
     [NSTimer
-     　scheduledTimerWithTimeInterval:1.5f
-     　target:self
-     　selector:@selector(hogeMethod:)
-     　userInfo:nil
-     　repeats:YES
+        scheduledTimerWithTimeInterval:1.5f
+        target:self
+        selector:@selector(takePhoto:)
+        userInfo:nil
+        repeats:YES
      ];
+    
+    [tm fire];
 }
 
 - (void)setupAVCapture
@@ -78,7 +85,9 @@
     NSLog(@"hoge");
     // 画像への出力を作成し、セッションに追加
     self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    //self.VideoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
     [self.session addOutput:self.stillImageOutput];
+    [self.session addOutput:self.VideoDataOutput];
     
     // キャプチャーセッションから入力のプレビュー表示を作成
     AVCaptureVideoPreviewLayer *captureVideoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
@@ -101,6 +110,7 @@
     NSLog(@"takePhoto");
     // ビデオ入力のAVCaptureConnectionを取得
     AVCaptureConnection *videoConnection = [self.stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
+    //AVCaptureConnection *silentConnection = [self.VideoDataOutput connectionWithMediaType:AVMediaTypeVideo];
     
     if (videoConnection == nil) {
         return;
@@ -141,6 +151,99 @@
           */
      }];
 }
+/*
+- (void)setupAVCapture
+{
+    NSError *error = nil;
+    
+    // 入力と出力からキャプチャーセッションを作成
+    self.session = [[AVCaptureSession alloc] init];
+    
+    self.session.sessionPreset = AVCaptureSessionPresetMedium;
+    
+    // カメラからの入力を作成
+    AVCaptureDevice *camera = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    
+    // カメラからの入力を作成し、セッションに追加
+    self.videoInput = [AVCaptureDeviceInput deviceInputWithDevice:camera error:&error];
+    [self.session addInput:self.videoInput];
+    
+    // 画像への出力を作成し、セッションに追加
+    self.videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
+    [self.session addOutput:self.videoDataOutput];
+    
+    // ビデオ出力のキャプチャの画像情報のキューを設定
+    dispatch_queue_t queue = dispatch_queue_create("myQueue", NULL);
+    [self.videoDataOutput setAlwaysDiscardsLateVideoFrames:TRUE];
+    [self.videoDataOutput setSampleBufferDelegate:self queue:queue];
+    
+    // ビデオへの出力の画像は、BGRAで出力
+    self.videoDataOutput.videoSettings = @{
+                                           (id)kCVPixelBufferPixelFormatTypeKey : [NSNumber numberWithInt:kCVPixelFormatType_32BGRA]
+                                           };
+    
+    // ビデオ入力のAVCaptureConnectionを取得
+    AVCaptureConnection *videoConnection = [self.videoDataOutput connectionWithMediaType:AVMediaTypeVideo];
+    
+    // 1秒あたり4回画像をキャプチャ
+    videoConnection.videoMinFrameDuration = CMTimeMake(1, 4);
+    
+    [self.session startRunning];
+}
+
+// AVCaptureVideoDataOutputSampleBufferDelegateプロトコルのメソッド。新しいキャプチャの情報が追加されたときに呼び出される。
+- (void)captureOutput:(AVCaptureOutput *)captureOutput
+didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
+       fromConnection:(AVCaptureConnection *)connection
+{
+    // キャプチャしたフレームからCGImageを作成
+    UIImage *image = [self imageFromSampleBuffer:sampleBuffer];
+    
+    // 画像を画面に表示
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.previewImageView.image = image;
+    });
+}
+
+// サンプルバッファのデータからCGImageRefを生成する
+- (UIImage *)imageFromSampleBuffer:(CMSampleBufferRef)sampleBuffer
+{
+    CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+    
+    // ピクセルバッファのベースアドレスをロックする
+    CVPixelBufferLockBaseAddress(imageBuffer, 0);
+    
+    // Get information of the image
+    uint8_t *baseAddress = (uint8_t *)CVPixelBufferGetBaseAddressOfPlane(imageBuffer, 0);
+    
+    size_t bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer);
+    size_t width = CVPixelBufferGetWidth(imageBuffer);
+    size_t height = CVPixelBufferGetHeight(imageBuffer);
+    
+    // RGBの色空間
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    CGContextRef newContext = CGBitmapContextCreate(baseAddress,
+                                                    width,
+                                                    height,
+                                                    8,
+                                                    bytesPerRow,
+                                                    colorSpace,
+                                                    kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+    
+    CGImageRef cgImage = CGBitmapContextCreateImage(newContext);
+    
+    CGContextRelease(newContext);
+    CGColorSpaceRelease(colorSpace);
+    CVPixelBufferUnlockBaseAddress(imageBuffer, 0);
+    
+    UIImage *image = [UIImage imageWithCGImage:cgImage scale:1.0 orientation:UIImageOrientationRight];
+    
+    CGImageRelease(cgImage);
+    
+    return image;
+}
+*/
 
 - (void)didReceiveMemoryWarning
 {
