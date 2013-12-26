@@ -13,6 +13,9 @@
 		BAF00BB5186BFA1200219390 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB4186BFA1200219390 /* CoreVideo.framework */; };
 		BAF00BB7186BFA4100219390 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAF00BB6186BFA4100219390 /* AVFoundation.framework */; };
 		BAF00BBA186BFB4600219390 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF00BB9186BFB4600219390 /* CameraViewController.m */; };
+		BAF00BC0186C02F900219390 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF00BBC186C02F900219390 /* button.png */; };
+		BAF00BC2186C02F900219390 /* point.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF00BBE186C02F900219390 /* point.png */; };
+		BAF00BC3186C02F900219390 /* roulette.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF00BBF186C02F900219390 /* roulette.png */; };
 		D47CCC34186BF75400D4F822 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D47CCC33186BF75400D4F822 /* SettingViewController.m */; };
 		D4C93FE1186BE45100669027 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE0186BE45100669027 /* Foundation.framework */; };
 		D4C93FE3186BE45100669027 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C93FE2186BE45100669027 /* CoreGraphics.framework */; };
@@ -51,6 +54,9 @@
 		BAF00BB6186BFA4100219390 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BAF00BB8186BFB4600219390 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		BAF00BB9186BFB4600219390 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		BAF00BBC186C02F900219390 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		BAF00BBE186C02F900219390 /* point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point.png; sourceTree = "<group>"; };
+		BAF00BBF186C02F900219390 /* roulette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = roulette.png; sourceTree = "<group>"; };
 		D47CCC32186BF75400D4F822 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		D47CCC33186BF75400D4F822 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		D4C93FDD186BE45100669027 /* majikichishatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = majikichishatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +111,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAF00BBB186C02E700219390 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				BAF00BBC186C02F900219390 /* button.png */,
+				BAF00BBE186C02F900219390 /* point.png */,
+				BAF00BBF186C02F900219390 /* roulette.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		D4C93FD4186BE45100669027 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +162,7 @@
 		D4C93FE6186BE45200669027 /* majikichishatter */ = {
 			isa = PBXGroup;
 			children = (
+				BAF00BBB186C02E700219390 /* images */,
 				D4C93FEF186BE45200669027 /* AppDelegate.h */,
 				D4C93FF0186BE45200669027 /* AppDelegate.m */,
 				D4C9400F186BE4EB00669027 /* FaceDetection.h */,
@@ -267,7 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C93FEB186BE45200669027 /* InfoPlist.strings in Resources */,
+				BAF00BC0186C02F900219390 /* button.png in Resources */,
+				BAF00BC2186C02F900219390 /* point.png in Resources */,
 				D4C93FF3186BE45200669027 /* Images.xcassets in Resources */,
+				BAF00BC3186C02F900219390 /* roulette.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +474,7 @@
 				GCC_PREFIX_HEADER = "majikichishatter/majikichishatter-Prefix.pch";
 				INFOPLIST_FILE = "majikichishatter/majikichishatter-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "82D930A3-1F4B-41C3-A2CF-004E84AD84B1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -473,6 +494,7 @@
 				GCC_PREFIX_HEADER = "majikichishatter/majikichishatter-Prefix.pch";
 				INFOPLIST_FILE = "majikichishatter/majikichishatter-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "82D930A3-1F4B-41C3-A2CF-004E84AD84B1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

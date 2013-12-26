@@ -5,6 +5,7 @@
 //  Created by 浅野 友希 on 2013/12/26.
 //  Copyright (c) 2013年 Kazuki Taniguchi. All rights reserved.
 //
+#define SCREEN_BOUNDS   ([UIScreen mainScreen].bounds)
 
 #import "SettingViewController.h"
 
@@ -18,14 +19,51 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.view.backgroundColor = [UIColor colorWithRed:0.600 green:0.157 blue:0.224 alpha:1.0];
         // Custom initialization
+        UIFont *font = [UIFont fontWithName:@"HiraKakuProN-W3" size:15.0f];
+        UIFont *centerFont = [UIFont fontWithName:@"HiraKakuProN-W3" size:20.0f];
+        
+        //上の文字
+        UILabel *label = [[UILabel alloc]init];
+        label.textColor = [UIColor whiteColor];
+        label.font = font;
+        label.text = @"撮りたい人数を設定してください。";
+        [label sizeToFit];
+        label.frame = CGRectMake((SCREEN_BOUNDS.size.width-label.frame.size.width)/2, 56, label.frame.size.width, label.frame.size.height);
+        [self.view addSubview: label];
+        
+        //三角
+        UIImage *triangle = [UIImage imageNamed:@"point"];
+        UIImageView *triangleImageView = [[UIImageView alloc]initWithImage: triangle];
+        triangleImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 25)/2, 125, 25, 21);
+        [self.view addSubview: triangleImageView];
+        
+        //ルーレット
+        UIImage *roulette = [UIImage imageNamed:@"roulette"];
+        UIImageView *rouletteImageView = [[UIImageView alloc]initWithImage: roulette];
+        rouletteImageView.frame = CGRectMake((SCREEN_BOUNDS.size.width - 250)/2, 107, 250, 250);
+        [self.view addSubview: rouletteImageView];
+        
+        //真ん中のラベル
+        UILabel *centerLabel = [[UILabel alloc]init];
+        centerLabel.textColor = [UIColor whiteColor];
+        centerLabel.font = centerFont;
+        centerLabel.text = @"1";
+        [centerLabel sizeToFit];
+        centerLabel.frame = CGRectMake((SCREEN_BOUNDS.size.width- centerLabel.frame.size.width)/2, 240, centerLabel.frame.size.width, centerLabel.frame.size.height);
+        [self.view addSubview: centerLabel];
+        
+        //下のボタン
+        UIButton *button = [UIButton buttonWithType: UIButtonTypeCustom];
+        [button setImage:[UIImage imageNamed:@"roulette"] forState:UIControlStateNormal];
+        [self.view addSubview: button];
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
-    self.view.backgroundColor = [UIColor blueColor];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
